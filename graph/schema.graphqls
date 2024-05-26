@@ -1,3 +1,5 @@
+scalar Time
+
 type User {
   id: ID!
   username: String!
@@ -11,6 +13,7 @@ type Post {
   content: String!
   comments: [Comment!]
   commentsEnabled: Boolean!
+  createdAt: Time!
   author: User!
 }
 
@@ -19,7 +22,7 @@ type Comment {
   postId: ID!
   parentId: ID
   content: String!
-  createdAt: String!
+  createdAt: Time!
   author: User!
 }
 
